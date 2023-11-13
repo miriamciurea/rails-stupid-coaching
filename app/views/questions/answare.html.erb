@@ -1,0 +1,16 @@
+<div style="text-align: center; margin-top: 25px">
+  <h3>Your answer: </h3>
+  <p><%= params[:question] %></p>
+  <h3>Coach answer:</h3>
+  <p>
+      <% if params[:question][-1] == "?" %>
+      <% res = 'Silly question, get dressed and go to work!' %>
+    <% elsif params[:question] == "I am going to work" %>
+      <% res = 'Great!' %>
+    <% else %>
+      <% res = "I don't care, get dressed and go to work!" %>
+    <% end %>
+    <%= res %>
+    </p>
+  <%= link_to 'ask me something', ask_path %>
+</div>
